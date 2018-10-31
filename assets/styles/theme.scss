@@ -1,0 +1,15 @@
+$background-color: $scorpion;
+$font-color: $lime;
+$quote-color: $cod-gray;
+$font-size: 30px;
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+}
+
+.quote {
+  background-color: $quote-color;
+  font-size: $font-size * 1.5;
+  color: $font-color;
+}

@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+<body class="container-fluid">
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <input type="submit" value="Sign up!">
+    </fieldset>
+  </form>
+
+  <h1>Tic-Tac-Toe</h1>
+
+  <p class="quote">Try your luck at this age-old game of skill!</p>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-6 content">
+        <div class="container-fluid tic-container">
+          <div class="row tic-row">
+            <div class="col-4 tic-box blue"> X </div>
+            <div class="col-4 tic-box blue"> X </div>
+            <div class="col-4 tic-box blue"> X </div>
+          </div>
+          <div class="row tic-row">
+            <div class="col-4 tic-box blue"> O </div>
+            <div class="col-4 tic-box blue"> O </div>
+            <div class="col-4 tic-box blue"> O </div>
+          </div>
+          <div class="row tic-row">
+            <div class="col-4 tic-box blue"> X </div>
+            <div class="col-4 tic-box blue"> X </div>
+            <div class="col-4 tic-box blue"> X </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#startOverModal"> Start Over</button>
+  <div class="modal fade" id="startOverModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="startOverModalLabel">Game Over.</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          You win. or You lose.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          <button type="button" class="btn btn-primary">SAVE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
