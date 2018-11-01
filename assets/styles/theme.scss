@@ -3,6 +3,14 @@ $font-color: $lime;
 $quote-color: $cod-gray;
 $font-size: 30px;
 
+h1 {
+  background-color: $font-color;
+  font-size: $font-size * 1.5;
+  color: $quote-color;
+  text-align: center;
+  text-shadow: 5px;
+}
+
 .quote {
   background-color: $quote-color;
   font-size: $font-size * 1.5;
@@ -20,11 +28,25 @@ $font-size: 30px;
 }
 
 .gameSquare {
-  width: 33%;
-  height: 33%;
+  width: 33.3%;
+  height: 33.3%;
   border: 3px solid blue;
+  font-weight: bolder;
+  font-family: fantasy;
+  font-size: 150px;
+  text-align: center;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .gameSquare:hover {
   background-color: green;
+}
+
+.startOverButton {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
 }
