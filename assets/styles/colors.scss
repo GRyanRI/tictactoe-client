@@ -10,3 +10,17 @@ $scorpion: #595959;
 $tundora: #444;
 $mine-shaft: #363636;
 $cod-gray: #111;
+$palettes: (
+  mono: (black: #000, dark: #333, base: #666, light: #888, white: #fff,),
+  brown: (light: #f7f4ef, medium: #f7f4ee, dark: #aaa392,),
+  brand: (
+    macaroni: #eba43c,
+    orange: #f37930,
+    green: #75a832,
+    teal: #138f87,
+    darker-gray: #466368,
+    dark-gray: #5c656a,
+    medium-gray: #9baeb2,
+    light-gray: #919598,
+    dark-blue: #1e3037,)
+  );

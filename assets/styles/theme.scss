@@ -3,13 +3,24 @@ $font-color: $lime;
 $quote-color: $cod-gray;
 $font-size: 30px;
 
-body {
-  background-color: $background-color;
-  color: $font-color;
-}
-
 .quote {
   background-color: $quote-color;
   font-size: $font-size * 1.5;
   color: $font-color;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-container {
+  height: 100%;
+  width: 100%;
+}
+
+.gameSquare {
+  width: 200px;
+  height: 200px;
+  border: 3px solid blue;
 }
