@@ -20,7 +20,7 @@ h1 {
 .gameBoard {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   height: 618px;
   width: 618px;
   justify-content: center;

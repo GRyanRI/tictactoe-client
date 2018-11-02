@@ -10,20 +10,36 @@ $(() => {
   const player1 = 'X'
   const player2 = 'O'
 
+  let movesArray = []
   let currentTurn = 1
   let moves = 0
   let square = $('.gameSquare')
 
-  square.on('click', function (c) {
+  square.on('click', function(c) {
     moves++
-    if (currentTurn === 1) {
-      event.target.innerHTML = player1
-      event.target.style.color = 'red'
-      currentTurn++
+    const currentText = $(this).text()
+    // check if innerHTML is empty (this.text)
+    if (currentText === "") {
+      if (currentTurn === 1) {
+        $(this).text(player1)
+        event.target.style.color = 'red'
+        currentTurn++
+      } else {
+        $(this).text(player2)
+        event.target.style.color = 'gray'
+        currentTurn--
+      }
+      if (moves > 4) {
+        $('.gameBoard div').map(function(x) {
+          if($(this).text() !== "") {
+            movesArray[x] = $(this).text()
+          }
+        })
+        console.log(movesArray)
+      }
     } else {
-      event.target.innerHTML = player2
-      event.target.style.color = 'gray'
-      currentTurn--
+      console.log('Space is occupied.')
     }
   })
+
 })
