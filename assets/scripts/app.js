@@ -66,6 +66,7 @@ $(() => {
       if(x) {
         $('#message').html("We have a winner!")
         $('#message').show()
+        square.off('click')
       }
       const movesArrayLength = movesArray.filter(function(index) {
         return isNaN(index)
