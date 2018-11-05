@@ -50,3 +50,14 @@ h1 {
   flex-wrap: wrap;
   padding: 10px;
 }
+
+#message {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: $silver-chalice;
+  display: none;
+  text-align: center
+}

@@ -1,113 +1,105 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# browser-template
+Thank you for coming to play Tic-Tac-Toe!
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+This is my first project in my web development course. It was a huge challenge, but I really enjoyed the process. Listed below are the goals I was able to achieve when working on this site:
 
-## Installation
+Game Engine
 
-1. [Download](../../archive/master.zip) this template.
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `tictactoe-project` with the name of
-    your project.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+1. [x] Create Empty Board in JS
+2. [x] Create Current Player
+3. [x] Add Current Player to Board
+    * [x] Current Player rotates between x and o
+    * [x] Can not choose already occupied spots
+4. [x] Check Board for Winner
+5. [x] Design a game board
+6. [x] Add a click handler for when a space on the game board is clicked
+7. [x] If the user clicks on a valid space then add their X or O
+8. [x] Do not allow users to add an X or O to an invalid space
+9. [x] Add messaging for the user when the user clicks on an invalid space
+10. [x] Add messaging for the user when the game is over (win or draw).
+11. [x] Do not allow users to add an X or O to any spaces after the game is over
 
-## Structure
+Things I struggled with:
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+Authentication
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`assets/scripts/config.js`](assets/scripts/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+1.  Review api-token-auth
+2. [] Sign Up (curl then web app)
+3. [] Sign In (curl then web app)
+4. [] Change Password (curl then web app)
+5. [] Sign Out (curl then web page)
+6. [] All API calls have success or failure messages
+7. [] Review query-ajax-post
+8. [] Create Game, start new game (curl then web app)
+9. [] Update Game, play the game (curl then web app)
+10. [] Get Games (curl then web app)
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+Ideally I would have liked to add some more personal touches, and I will as I become more proficient with this type of code.
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+My original Game Scope:
 
-To deploy a browser-template based SPA, run `grunt deploy`.
+Data Structure
 
-## Adding Images
+User
+* User Profile (possible profile photo?)
+    * General info section
+* Email (for login)
+* Password (for login)
+* Wins/loss record
+    * Number of wins
+    * Number of losses
+    * Win percentage
+* Ranking
+    * Daily, All-time
 
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
+Game
+* Player 1 info
+* Player 2 info
+* Player moves
+    * “x” or “o” selects space
+        * If space is occupied = error message
+        * If space is unoccupied = apply letter to square
+        * Is there 3 in a row?
+        * Are there anymore spaces to place x’s or o’s?
+* Is the game over?
+    * If yes, Congratulate winner.
+    * If no, signal opposing player “Your turn"
+* Log Win/Loss info
 
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
-```
+Plan
+* MAKE IT WORK!
+    * HTML
+    * JS
+* Add personal css styling.
+*  Test, Test, Test.
+* Dry-out code.
 
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
+User Stories
+* As a player, my goal is to win the game, so that I can improve my ranking.
+* As a player, I have to choice to what space to select, with the goal of getting 3 in a row
+* As a player, I want to be congratulated when I am victorious, so I feel good
+* As a game, I want to be visually appealing and engaging, encouraging return players
+* As a game, I want to keep accurate records, so my users can know how they compare to other users.
 
-## Adding Fonts
+Board
 
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
+The game board will need a theme. It will require an appealing background, and stylish X’s & O’s. Preferably, some type of action or sound will occur when a user makes their move. The board itself will include an array of elements (squares).  When a player clicks a square), if the square is available, it will fill it with a value of “x" or “o”. If unavailable, it will return a “Try Again” message.
 
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
+Code Modular
+HTML, JS, CSS
 
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
+Creative Spin
+* Theme - Possibly Football related due to the X’s and O's
+* Select your favorite NFL team option
+* Possible Quarterback throwing footballs at the squares to mark them
 
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-```
+Version Control
+Going to split git into branches, and commit often, so I don’t get tripped up.
 
-## Tasks
+Additional features
+Possible prizes or awards for streaks
 
-Developers should run these often!
+My Wireframe:
 
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-
-## Additional Resources
-
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
-
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+https://imgur.com/d6R8TrI

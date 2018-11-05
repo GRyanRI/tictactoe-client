@@ -15,18 +15,6 @@ $(() => {
   let moves = 0
   let square = $('.gameSquare')
 
-  /* const winningCombo = [
-    [0, 3, 6],
-    [0, 4, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 4, 6],
-    [2, 5, 8],
-    [4, 5, 6],
-    [6, 7, 8]
-  ]
-*/
-
   square.on('click', function (c) {
     moves++
     const currentText = $(this).text()
@@ -45,6 +33,7 @@ $(() => {
     }
     // start of checkForWin logic
     if (moves > 4) {
+      //
       $('.gameBoard div').map(function (x) {
         if ($(this).text() !== "") {
           movesArray[x] = $(this).text()
@@ -75,15 +64,15 @@ $(() => {
       else  if ((square2==square4) && (square4==square6)) {x = true}
 
       if(x) {
-        $('#message').html("we have a winner")
-        console.log("we have a winner")
+        $('#message').html("We have a winner!")
+        $('#message').show()
       }
       const movesArrayLength = movesArray.filter(function(index) {
         return isNaN(index)
       }).length
       if(!x && moves === 9) {
-        $('#message').html("we have a tie")
-        console.log("we have a tie")
+        $('#message').html("we have a tie.")
+        $('#message').show()
       }
     }
   })
