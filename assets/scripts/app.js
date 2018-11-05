@@ -9,7 +9,7 @@
 $(() => {
   const player1 = 'X'
   const player2 = 'O'
-
+  //filled array with numbers, to prevent blank squares from triggering win
   const movesArray = [1,2,3,4,5,6,7,8,9]
   let currentTurn = 1
   let moves = 0
@@ -35,6 +35,7 @@ $(() => {
     if (moves > 4) {
       //
       $('.gameBoard div').map(function (x) {
+        // if a letter is detected, push it to movesArray
         if ($(this).text() !== "") {
           movesArray[x] = $(this).text()
         }
@@ -65,7 +66,9 @@ $(() => {
 
       if(x) {
         $('#message').html("We have a winner!")
+        // show the message after win
         $('#message').show()
+        // shut off the squares
         square.off('click')
       }
       const movesArrayLength = movesArray.filter(function(index) {
