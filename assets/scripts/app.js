@@ -9,13 +9,13 @@
 $(() => {
   const player1 = 'X'
   const player2 = 'O'
-  //filled array with numbers, to prevent blank squares from triggering win
-  const movesArray = [1,2,3,4,5,6,7,8,9]
+  // filled array with numbers, to prevent blank squares from triggering win
+  const movesArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   let currentTurn = 1
   let moves = 0
   let square = $('.gameSquare')
 
-  square.on('click', function (c) {
+  square.on('click', function(c) {
     moves++
     const currentText = $(this).text()
     // check if box is empty (this.text)
@@ -49,33 +49,45 @@ $(() => {
       let square6 = movesArray[6]
       let square7 = movesArray[7]
       let square8 = movesArray[8]
-      console.log(square0)
 
-      let x = false;
+      let x = false
 
-      if ((square0==square1) && (square1==square2)) {x = true}
-      else if ((square3==square4) && (square4==square5)) {x = true}
-      else if ((square6==square7) && (square7==square8)) {x = true}
+      if ((square0 == square1) && (square1 == square2)) {
+        x = true
+      } else if ((square3 == square4) && (square4 == square5)) {
+        x = true
+      } else if ((square6 == square7) && (square7 == square8)) {
+        x = true
+      }
       // check columns
-      else if ((square0==square3) && (square3==square6)) {x = true}
-      else if ((square1==square4) && (square4==square7)) {x = true}
-      else if ((square2==square5) && (square5==square8)) {x = true}
+      else if ((square0 == square3) && (square3 == square6)) {
+        x = true
+      } else if ((square1 == square4) && (square4 == square7)) {
+        x = true
+      } else if ((square2 == square5) && (square5 == square8)) {
+        x = true
+      }
       // check diagonals
-      else if ((square0==square4) && (square4==square8)) {x = true}
-      else  if ((square2==square4) && (square4==square6)) {x = true}
+      else if ((square0 == square4) && (square4 == square8)) {
+        x = true
+      } else if ((square2 == square4) && (square4 == square6)) {
+        x = true
+      }
 
-      if(x) {
+      if (x) {
         $('#message').html("We have a winner!")
         // show the message after win
         $('#message').show()
         // shut off the squares
         square.off('click')
       }
+      // filters out "placeholder numbers" from array
       const movesArrayLength = movesArray.filter(function(index) {
         return isNaN(index)
       }).length
-      if(!x && moves === 9) {
-        $('#message').html("we have a tie.")
+      // tie logic
+      if (!x && moves === 9) {
+        $('#message').html("We have a tie.")
         $('#message').show()
       }
     }
