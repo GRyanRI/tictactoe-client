@@ -1,5 +1,5 @@
 'use strict'
-
+const events = require('./events.js')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -7,13 +7,17 @@
 // require('./example')
 
 $(() => {
+  //used 'submit' instead of 'click' because I'm getting info from a form
+  $('#sign-up').on('submit', events.onSignUp)
+  $('#sign-in').on('submit', events.onSignIn)
+
   const player1 = 'X'
   const player2 = 'O'
 
   const movesArray = [1,2,3,4,5,6,7,8,9]
   let currentTurn = 1
   let moves = 0
-  let square = $('.gameSquare')
+  const square = $('.gameSquare')
 
   square.on('click', function (c) {
     moves++
