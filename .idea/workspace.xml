@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de260470-9e54-41b6-8339-072032729daf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scripts/ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scripts/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/events.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -20,10 +18,12 @@
     <session id="-2078580673">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,20 +40,20 @@
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="3" />
+          <entry key="ESLintLanguageService" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="235" />
-          <entry key="js" value="2585" />
+          <entry key="html" value="286" />
+          <entry key="js" value="3069" />
           <entry key="txt" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="235" />
-          <entry key="JavaScript" value="2585" />
+          <entry key="HTML" value="286" />
+          <entry key="JavaScript" value="3069" />
           <entry key="PLAIN_TEXT" value="48" />
         </counts>
       </usages-collector>
@@ -64,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+            <state relative-caret-position="260">
+              <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1886">
-              <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+            <state relative-caret-position="257">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scripts/events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="904">
-              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="619">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -91,17 +91,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scripts/ui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="8" selection-end-line="63" />
+            <state relative-caret-position="460">
+              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scripts/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+            <state relative-caret-position="1455">
+              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -122,6 +122,12 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>input</find>
+      <find>start</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -129,12 +135,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/assets/scripts/store.js" />
-        <option value="$PROJECT_DIR$/assets/scripts/events.js" />
         <option value="$PROJECT_DIR$/assets/scripts/ui.js" />
         <option value="$PROJECT_DIR$/assets/scripts/config.js" />
-        <option value="$PROJECT_DIR$/assets/scripts/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/scripts/api.js" />
+        <option value="$PROJECT_DIR$/assets/scripts/events.js" />
+        <option value="$PROJECT_DIR$/assets/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -158,11 +164,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="47" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="46" />
     <option name="y" value="23" />
-    <option name="width" value="929" />
-    <option name="height" value="877" />
+    <option name="width" value="1024" />
+    <option name="height" value="855" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -172,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +205,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,7 +253,9 @@
       <updated>1542042561105</updated>
       <workItem from="1542042562345" duration="11828000" />
       <workItem from="1542143541060" duration="4142000" />
-      <workItem from="1542297009709" duration="2742000" />
+      <workItem from="1542297009709" duration="3737000" />
+      <workItem from="1542381358080" duration="2582000" />
+      <workItem from="1542394038174" duration="3129000" />
     </task>
     <task id="LOCAL-00001" summary="Finished working API that is storing user tokens">
       <created>1542051003290</created>
@@ -260,13 +268,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18712000" />
+    <option name="totallyTimeSpent" value="25418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="46" y="23" width="1024" height="855" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -298,10 +306,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Finished working API that is storing user tokens" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/scripts/events.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        <state relative-caret-position="260">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -315,31 +323,31 @@
     <entry file="file://$PROJECT_DIR$/assets/scripts/store.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1886">
-          <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scripts/ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="8" selection-end-line="63" />
+        <state relative-caret-position="460">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/scripts/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state relative-caret-position="619">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scripts/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="1455">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>

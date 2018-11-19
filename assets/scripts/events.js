@@ -25,11 +25,11 @@ const onChangePassword = function (event) {
 //   fires off the API request, and sets success and failure callbacks
 //   for the request
 
-// const onNewGame = event => {
-//   api.newGame()
-//     .then(ui.onNewGameSuccess)
-//     .catch(ui.onNewGameFailure)
-// }
+const onNewGame = event => {
+  api.newGame()
+    .then(ui.onNewGameSuccess)
+    .catch(ui.onNewGameFailure)
+}
 // const onPatchGame = event => {
 //   api.patchGame(data)
 //     .then(ui.onPatchGameSuccess)
@@ -39,7 +39,7 @@ module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onChangePassword
-  // onNewGame,
+  onChangePassword,
+  onNewGame
   // onPatchGame
 }

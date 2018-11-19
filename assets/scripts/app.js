@@ -12,24 +12,30 @@ $(() => {
   $('#sign-in').on('submit', events.onSignIn)
   $('#sign-out').on('click', events.onSignOut)
   $('#change-password').on('submit', events.onChangePassword)
-  $('#new-game').on('click', events.onNewGame)
+  $('#new-game-button').on('click', function () {
+    gameOver = false
+    $('.gameSquare').html('')
+    moves = 0
+    movesArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    events.onNewGame()
+    $('#message').hide()
+  })
   $('.cell').on('click', events.onCellClick)
 
   const player1 = 'X'
   const player2 = 'O'
 
-  const movesArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  let movesArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   let currentTurn = 1
   let moves = 0
   const square = $('.gameSquare')
   let gameOver = false
 
-
   square.on('click', function (c) {
     moves++
     const currentText = $(this).text()
     // check if box is empty (this.text)
-    if(!gameOver){
+    if (!gameOver) {
       if (currentText === '') {
         // if current box is empty, initiate player1's turn
         if (currentTurn === 1) {
@@ -74,20 +80,20 @@ $(() => {
         else if ((square2==square4) && (square4==square6)) {x = true}
 
         if (x) {
-          $('#message').html("We have a winner!")
+          $('#message').html('We have a winner!')
           $('#message').show()
           gameOver = true
         }
-        const movesArrayLength = movesArray.filter(function(index) {
+        const movesArrayLength = movesArray.filter(function (index) {
           return isNaN(index)
         }).length
         if (!x && moves === 9) {
-          $('#message').html("we have a tie.")
+          $('#message').html('we have a tie.')
           $('#message').show()
           gameOver = true
         }
       }
-    }else {
+    } else {
       console.log('game is over. no more moves')
     }
   })

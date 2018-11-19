@@ -24,7 +24,7 @@ const signUpApi = function () {
     data: credentialsObj,
     // added function inside API if request = success, invoke function
     success: function (response) {
-      console.log(response)
+      $('input[type="text"],input[type="password"] ').val('')
     },
     error: function (response) {
       console.log(response)
@@ -44,7 +44,7 @@ const signInApi = function () {
     success: function (response) {
       // create user obj inside of store obj (puts response in store.user inc. tokens)
       store.user = response.user
-      console.log(store.user)
+      $('input[type="text"],input[type="password"] ').val('')
     },
     error: function (response) {
       console.log(response)
@@ -62,7 +62,9 @@ const signOutApi = function () {
       Authorization: 'Token token=' + store.user.token
     },
     success: function () {
-      console.log('logged out')
+      // clear forms
+      // selecting anything with input type 'text' or 'password' and setting them to ' '
+      $('input[type="text"],input[type="password"] ').val('')
     },
     error: function (response) {
       console.log(response)
@@ -86,25 +88,34 @@ const changePasswordApi = function () {
     },
     data: passwordObj,
     success: function () {
-      console.log("password changed succesfully")
+      // clears input forms
+      $('input[type="text"],input[type="password"] ').val('')
     },
     error: function () {
-      console.log("this sucks")
+      console.log('this sucks')
     }
   })
 }
 // api.js
 //  the code that actually fires off the AJAX request
 
-// const newGame = () => {
-//   return $.ajax({
-//     url: config.apiUrl + '/games',
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const newGame = () => {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    // stores new game info
+    success: function (response) {
+      store.game = response.game
+      console.log('new game')
+    },
+    error: function () {
+      console.log('this sucks')
+    }
+  })
+}
 //
 // const patchGame = data => {
 //   return $.ajax({
@@ -121,7 +132,7 @@ module.exports = {
   signUpApi,
   signInApi,
   signOutApi,
-  changePasswordApi
-  // newGame,
+  changePasswordApi,
+  newGame
   // patchGame
 }
