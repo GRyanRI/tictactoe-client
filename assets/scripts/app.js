@@ -26,12 +26,13 @@ $(() => {
   const player2 = 'O'
 
   let movesArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
   let currentTurn = 1
   let moves = 0
   const square = $('.gameSquare')
   let gameOver = false
 
-  square.on('click', function (c) {
+  square.on('click', function(c) {
     moves++
     const currentText = $(this).text()
     // check if box is empty (this.text)
